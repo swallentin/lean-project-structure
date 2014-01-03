@@ -1,6 +1,6 @@
 {
   "name": "lean-project-structure",
-  "version": "0.1.0",
+  "version": "0.2.0-0",
   "description": "A demo project used to setup a lean and efficient project structure for applications using angular, less and jade.",
   "main": "index.js",
   "directories": {

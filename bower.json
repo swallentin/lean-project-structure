@@ -1,10 +1,14 @@
 {
   "name": "lean-project-structure",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "authors": [
     "Stephan Wallentin <stephan.wallentin@gmail.com>"
   ],
   "description": "A demo project used to setup a lean and efficient project structure for applications using angular, less and jade.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swallentin/lean-project-structure.git"
+  },
   "license": "MIT",
   "private": true,
   "ignore": [
