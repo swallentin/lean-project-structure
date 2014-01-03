@@ -1,0 +1,30 @@
+doctype
+//if lt IE 7
+  <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+//if IE 7
+  <html class="no-js lt-ie9 lt-ie8">
+//if IE 8
+  <html class="no-js lt-ie9">
+//[if gt IE 8]><!
+html.no-js
+  //<![endif]
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    | 
+    | <!-- compiled CSS -->
+    | <% styles.forEach(function (file) { %>
+    | <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    | 
+    | <!-- compiled JavaScript -->
+    | <% scripts.forEach(function (file) { %>
+    | <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+  body
+    h1 Harrow thar!233
+    p lorem ipsums123

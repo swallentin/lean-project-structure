@@ -1,0 +1,36 @@
+{
+	"globals": {
+		"define": true,
+		"require": true,
+		"module": true,
+		"angular": true,
+		"$": true,
+		"describe": true,
+		"it": true,
+		"expect": true,
+		"inject": true,
+		"beforeEach": true
+	},
+
+	"bitwise": true,
+	"eqeqeq": true,
+	"forin": true,
+	"immed": true,
+	"indent": 4,
+	"newcap": true,
+	"noarg": true,
+	"strict": true,
+	"trailing": true,
+	"undef": true,
+	"unused": "vars",
+
+	"eqnull": true,
+	"evil": true,
+	"loopfunc": true,
+	"sub": true,
+
+	"onevar": true,
+	"white": true,
+
+	"browser": true
+}
