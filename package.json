@@ -21,12 +21,15 @@
     "grunt-contrib-connect": "~0.6.0",
     "grunt-contrib-uglify": "~0.2.7",
     "grunt-ngmin": "0.0.3",
-    "grunt-conventional-changelog": "~1.0.0",
-    "grunt-bump": "0.0.13"
+    "grunt-conventional-changelog": "~1.0.0"
   },
   "scripts": {
     "test": ""
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swallentin/lean-project-structure.git"
+  },  
   "author": "Stephan Wallentin",
   "license": "BSD"
 }

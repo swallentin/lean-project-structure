@@ -22,7 +22,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-conventional-changelog');
 	grunt.loadNpmTasks('grunt-bump');
 	grunt.loadNpmTasks('grunt-html2js');
 	grunt.loadNpmTasks('grunt-ngmin');
@@ -170,16 +169,6 @@ module.exports = function (grunt) {
 		},
 
 		/**
-		 * Creates a changelog on a new version.
-		 */
-		changelog: {
-			options: {
-				dest: 'CHANGELOG.md',
-				template: 'changelog.tpl'
-			}
-		},
-
-		/**
 		 * Increments the version number, etc.
 		 */
 		bump: {
@@ -188,16 +177,16 @@ module.exports = function (grunt) {
 					"package.json",
 					"bower.json"
 				],
-				commit: false,
+				commit: true,
 				commitMessage: 'chore(release): v%VERSION%',
 				commitFiles: [
 					"package.json",
 					"client/bower.json"
 				],
-				createTag: false,
+				createTag: true,
 				tagName: 'v%VERSION%',
 				tagMessage: 'Version %VERSION%',
-				push: false,
+				push: true,
 				pushTo: 'origin'
 			}
 		},		
