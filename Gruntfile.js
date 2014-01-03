@@ -22,6 +22,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-conventional-changelog');
+	grunt.loadNpmTasks('grunt-bump');
 	grunt.loadNpmTasks('grunt-html2js');
 	grunt.loadNpmTasks('grunt-ngmin');
 	grunt.loadNpmTasks('grunt-recess');
@@ -166,6 +168,39 @@ module.exports = function (grunt) {
 				dest: '<%= compile_dir %>/assets/<%= pkg.name %>-<%= pkg.version %>.js'
 			}
 		},
+
+		/**
+		 * Creates a changelog on a new version.
+		 */
+		changelog: {
+			options: {
+				dest: 'CHANGELOG.md',
+				template: 'changelog.tpl'
+			}
+		},
+
+		/**
+		 * Increments the version number, etc.
+		 */
+		bump: {
+			options: {
+				files: [
+					"package.json",
+					"bower.json"
+				],
+				commit: false,
+				commitMessage: 'chore(release): v%VERSION%',
+				commitFiles: [
+					"package.json",
+					"client/bower.json"
+				],
+				createTag: false,
+				tagName: 'v%VERSION%',
+				tagMessage: 'Version %VERSION%',
+				push: false,
+				pushTo: 'origin'
+			}
+		},		
 
 		/**
 		 * `ng-min` annotates the sources before minifying. That is, it allows us
